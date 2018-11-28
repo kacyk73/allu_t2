@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace allu2
 {
-    public partial class main : Form
+    public partial class Board : Form
     {
-        public main()
+        public Board()
         {
             InitializeComponent();
-        }
-
-        private void btn_go_Click(object sender, EventArgs e)
-        {
-
-            Board board = new Board();
-
-            board.ShowDialog();
-            
-
-
         }
     }
 }
