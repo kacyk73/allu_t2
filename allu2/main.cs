@@ -12,6 +12,7 @@ namespace allu2
 {
     public partial class main : Form
     {
+
         public main()
         {
             InitializeComponent();
@@ -23,8 +24,8 @@ namespace allu2
             Board board = new Board();
 
             board.ShowDialog();
-            
 
+            this.Close();
 
         }
     }

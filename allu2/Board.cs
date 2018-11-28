@@ -12,9 +12,23 @@ namespace allu2
 {
     public partial class Board : Form
     {
+        public GlobalParameters globalParameters;
+
         public Board()
         {
             InitializeComponent();
+            globalParameters = new GlobalParameters();
+            GameIsOn();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void GameIsOn()
+        {
+            
         }
     }
 }
