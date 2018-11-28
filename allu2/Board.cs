@@ -13,22 +13,34 @@ namespace allu2
     public partial class Board : Form
     {
         public GlobalParameters globalParameters;
+        public Graphics graphics;
 
         public Board()
         {
             InitializeComponent();
             globalParameters = new GlobalParameters();
-            GameIsOn();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBoardExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void GameIsOn()
         {
-            
+            //Graphics graphics = CreateGraphics();
+
+            Draw.drawBoardGrid(graphics, globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim);
+        }
+
+        private void Board_Load(object sender, EventArgs e)
+        {
+            graphics = CreateGraphics();
+        }
+
+        private void Board_Shown(object sender, EventArgs e)
+        {
+            GameIsOn();
         }
     }
 }
