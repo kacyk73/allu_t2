@@ -33,19 +33,21 @@
             // 
             // btnBoardExit
             // 
-            this.btnBoardExit.Location = new System.Drawing.Point(1382, 719);
+            this.btnBoardExit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBoardExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBoardExit.Location = new System.Drawing.Point(1382, 819);
             this.btnBoardExit.Name = "btnBoardExit";
             this.btnBoardExit.Size = new System.Drawing.Size(90, 30);
             this.btnBoardExit.TabIndex = 0;
             this.btnBoardExit.Text = "Exit!";
-            this.btnBoardExit.UseVisualStyleBackColor = true;
+            this.btnBoardExit.UseVisualStyleBackColor = false;
             this.btnBoardExit.Click += new System.EventHandler(this.btnBoardExit_Click);
             // 
             // Board
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1484, 861);
             this.Controls.Add(this.btnBoardExit);
             this.MaximizeBox = false;

@@ -28,9 +28,14 @@ namespace allu2
 
         private void GameIsOn()
         {
-            //Graphics graphics = CreateGraphics();
-
+            //initial drawings
+            Draw.setBackgroundBoardColor(graphics, globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim);
             Draw.drawBoardGrid(graphics, globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim);
+
+            InfantryLightArmy a = new InfantryLightArmy();
+            a.posX = 0;
+            a.posY = 0;
+            a.DrawArmyXY(graphics, globalParameters.boardBoxDim);
         }
 
         private void Board_Load(object sender, EventArgs e)
