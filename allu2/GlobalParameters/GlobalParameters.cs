@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace allu2
 {
+
+    //terrain type
+    public enum TerrainKind
+    {
+        grass = 1,
+        water = 2,
+        city = 3,
+        road = 4
+    }
+
     public class GlobalParameters
     {
         public int boardBoxDim = 20;

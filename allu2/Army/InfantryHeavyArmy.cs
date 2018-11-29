@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace allu2
 {
-    public class InfantryLightArmy: InfantryArmy, IArmyDrawable
+    public class InfantryHeavyArmy : InfantryArmy, IArmyDrawable
     {
         public new void DrawArmyXY(Graphics graphics, int boardBoxDim)
         {
@@ -18,7 +18,7 @@ namespace allu2
 
             base.DrawArmyXY(graphics, boardBoxDim);
 
-            //graphics.DrawLine(pen, x + 2, y + 2, x + 10, y + 2);
+            graphics.DrawLine(pen, x + 2, y + 2, x + 10, y + 2);
 
         }
     }

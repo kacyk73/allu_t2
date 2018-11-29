@@ -32,7 +32,11 @@ namespace allu2
             Draw.setBackgroundBoardColor(graphics, globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim);
             Draw.drawBoardGrid(graphics, globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim);
 
-            InfantryLightArmy a = new InfantryLightArmy();
+            //init map
+            Terrain map = new Terrain(globalParameters.boardDimX, globalParameters.boardDimY);
+            map.Load_Map();
+
+            InfantryHeavyArmy a = new InfantryHeavyArmy();
             a.posX = 0;
             a.posY = 0;
             a.DrawArmyXY(graphics, globalParameters.boardBoxDim);
