@@ -16,6 +16,15 @@ namespace allu2
         road = 4
     }
 
+    //population initial settings
+    public enum PopulationSettings
+    {
+        minimal = 1000,
+        maximal = 5000,
+        city_factor = 20
+
+    }
+
     public class GlobalParameters
     {
         public int boardBoxDim = 20;

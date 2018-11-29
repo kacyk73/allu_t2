@@ -35,6 +35,11 @@ namespace allu2
             //init map
             Terrain map = new Terrain(globalParameters.boardDimX, globalParameters.boardDimY);
             map.Load_Map();
+            Draw.drawMapFull(graphics, globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim, map.map);
+
+            //populate civilians
+            Population pop = new Population(globalParameters.boardDimX, globalParameters.boardDimY);
+            pop.Populate(map.map);
 
             InfantryHeavyArmy a = new InfantryHeavyArmy();
             a.posX = 0;
