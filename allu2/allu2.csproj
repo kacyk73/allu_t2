@@ -65,6 +65,7 @@
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
     <Compile Include="Mouse\PosXY.cs" />
+    <Compile Include="Pane\Pane.cs" />
     <Compile Include="Population\Population.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

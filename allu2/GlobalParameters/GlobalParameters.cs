@@ -29,9 +29,18 @@ namespace allu2
         public int boardBoxDim = 20;
         public int boardDimX = 60;
         public int boardDimY = 40;
+        
 
         //out of range parameter
         public const int OutOfRange = 999;
+
+        private PosXY currentPositionXY;
+
+        public PosXY CurrentPositionXY
+        {
+            get { return currentPositionXY; }
+            set { currentPositionXY = value; }
+        }
 
     }
 }

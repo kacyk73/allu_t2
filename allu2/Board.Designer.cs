@@ -59,6 +59,7 @@
             this.Text = "The Allu game is on!";
             this.Load += new System.EventHandler(this.Board_Load);
             this.Shown += new System.EventHandler(this.Board_Shown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Board_MouseMove);
             this.ResumeLayout(false);
 
         }

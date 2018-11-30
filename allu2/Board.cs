@@ -15,6 +15,8 @@ namespace allu2
         public GlobalParameters globalParameters;
         public Graphics graphics;
 
+        private PosXY currentPositionXY;
+
         public Board()
         {
             InitializeComponent();
@@ -55,6 +57,11 @@ namespace allu2
         private void Board_Shown(object sender, EventArgs e)
         {
             GameIsOn();
+        }
+
+        private void Board_MouseMove(object sender, MouseEventArgs e)
+        {
+            Pane.RefreshInfoPaneXY(e, globalParameters.CurrentPositionXY);
         }
     }
 }

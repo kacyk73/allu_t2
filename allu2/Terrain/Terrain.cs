@@ -62,5 +62,6 @@ namespace allu2
             }
             map = terr;
         }
+
     }
 }
