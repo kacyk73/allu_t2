@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace allu2
-{
-
+{ 
     //terrain type
     public enum TerrainKind
     {
@@ -30,6 +29,9 @@ namespace allu2
         public int boardBoxDim = 20;
         public int boardDimX = 60;
         public int boardDimY = 40;
-        
+
+        //out of range parameter
+        public const int OutOfRange = 999;
+
     }
 }

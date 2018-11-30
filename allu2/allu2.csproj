@@ -64,6 +64,7 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mouse\PosXY.cs" />
     <Compile Include="Population\Population.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
