@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace allu2
 {
-    public class Pane
+    public class Pane : Board
     {
         private int boardDimX;
         private int boardDimY;
@@ -26,9 +26,13 @@ namespace allu2
             //to fix at very beginning
             TempPositionXY = GetPositionXY(e.X, e.Y);
             if (CurrentPositionXY != TempPositionXY)
-            {
-
-            }
+                if ((TempPositionXY.PosX != GlobalParameters.OutOfRange) && (TempPositionXY.PosY != GlobalParameters.OutOfRange))
+                {
+                    CurrentPositionXY = TempPositionXY;
+                    board.lblPosX.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosX));
+                    
+                    //labely.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosY));
+                }
 
         }
 

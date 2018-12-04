@@ -13,6 +13,8 @@ namespace allu2
     public partial class main : Form
     {
 
+        Board board;
+
         public main()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace allu2
         private void btn_go_Click(object sender, EventArgs e)
         {
 
-            Board board = new Board();
+            board = new Board();
 
             board.ShowDialog();
 
