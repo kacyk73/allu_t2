@@ -29,7 +29,7 @@ namespace allu2
                 if ((TempPositionXY.PosX != GlobalParameters.OutOfRange) && (TempPositionXY.PosY != GlobalParameters.OutOfRange))
                 {
                     CurrentPositionXY = TempPositionXY;
-                    board.lblPosX.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosX));
+                    //board.lblPosX.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosX));
                     
                     //labely.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosY));
                 }
