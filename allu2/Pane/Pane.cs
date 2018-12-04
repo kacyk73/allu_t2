@@ -9,11 +9,22 @@ namespace allu2
 {
     public class Pane
     {
-        internal static void RefreshInfoPaneXY(MouseEventArgs e, PosXY CurrentPositionXY)
+        private int boardDimX;
+        private int boardDimY;
+        private int boardBoxDim;
+
+        public Pane(int boardDimX, int boardDimY, int boardBoxDim)
+        {
+            this.boardDimX = boardDimX;
+            this.boardDimY = boardDimY;
+            this.boardBoxDim = boardBoxDim;
+        }
+
+        internal static void RefreshInfoPaneXY(MouseEventArgs e, PosXY CurrentPositionXY, int boardDimX, int boardDimY, int boardBoxDim)
         {
             var TempPositionXY = new PosXY();
             //to fix at very beginning
-            TempPositionXY = GetPositionXY(e.X, e.Y);
+            TempPositionXY = GetPositionXY(e.X, e.Y, boardDimX, boardDimY, boardBoxDim);
             if (CurrentPositionXY != TempPositionXY)
             {
 
@@ -21,16 +32,16 @@ namespace allu2
 
         }
 
-        internal static PosXY GetPositionXY(int x, int y)
+        internal static PosXY GetPositionXY(int x, int y, int boardDimX, int boardDimY, int boardBoxDim)
         {
             var result = new PosXY();
 
-            //if ((x >= 0) && (y >= 0) && (x < glb_settings.get_map_dim_parameter_x() * glb_settings.get_map_box_size())
-            //    && (y < glb_settings.get_map_dim_parameter_y() * glb_settings.get_map_box_size()))
-            //{
-            //    result.PosX = x / glb_settings.get_map_box_size();
-            //    result.PosY = y / glb_settings.get_map_box_size();
-            //}
+            if ((x >= 0) && (y >= 0) && (x <  boardDimX * boardBoxDim)
+                && (y < boardDimY * boardBoxDim))
+            {
+                result.PosX = x / boardBoxDim;
+                result.PosY = y / boardBoxDim;
+            }
 
             return result;
         }
