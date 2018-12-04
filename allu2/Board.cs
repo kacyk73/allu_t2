@@ -16,6 +16,7 @@ namespace allu2
         public Graphics graphics;
 
         private PosXY currentPositionXY;
+        Pane pane;
 
         public Board()
         {
@@ -40,7 +41,7 @@ namespace allu2
             Draw.drawMapFull(graphics, globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim, map.map);
 
             //init pane
-            Pane pane = new Pane(globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim);
+            pane = new Pane(globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim);
 
             //populate civilians
             Population pop = new Population(globalParameters.boardDimX, globalParameters.boardDimY);
@@ -64,7 +65,7 @@ namespace allu2
 
         private void Board_MouseMove(object sender, MouseEventArgs e)
         {
-            Pane.RefreshInfoPaneXY(e, globalParameters.CurrentPositionXY, globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim);
+            pane.RefreshInfoPaneXY(e, globalParameters.CurrentPositionXY);
         }
     }
 }

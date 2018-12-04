@@ -20,11 +20,11 @@ namespace allu2
             this.boardBoxDim = boardBoxDim;
         }
 
-        internal static void RefreshInfoPaneXY(MouseEventArgs e, PosXY CurrentPositionXY, int boardDimX, int boardDimY, int boardBoxDim)
+        internal void RefreshInfoPaneXY(MouseEventArgs e, PosXY CurrentPositionXY)
         {
             var TempPositionXY = new PosXY();
             //to fix at very beginning
-            TempPositionXY = GetPositionXY(e.X, e.Y, boardDimX, boardDimY, boardBoxDim);
+            TempPositionXY = GetPositionXY(e.X, e.Y);
             if (CurrentPositionXY != TempPositionXY)
             {
 
@@ -32,7 +32,7 @@ namespace allu2
 
         }
 
-        internal static PosXY GetPositionXY(int x, int y, int boardDimX, int boardDimY, int boardBoxDim)
+        internal PosXY GetPositionXY(int x, int y)
         {
             var result = new PosXY();
 
