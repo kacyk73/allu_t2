@@ -67,7 +67,7 @@ namespace allu2
 
         private void Board_MouseMove(object sender, MouseEventArgs e)
         {
-            //pane.RefreshInfoPaneXY(e, globalParameters.CurrentPositionXY);
+            //pane.RefreshInfoPaneXY(e, globalParameters.CurrentPositionXY, ref lblPosX, ref lblPosY);
         }
 
     }

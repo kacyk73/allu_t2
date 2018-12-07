@@ -20,7 +20,7 @@ namespace allu2
             this.boardBoxDim = boardBoxDim;
         }
 
-        internal void RefreshInfoPaneXY(MouseEventArgs e, PosXY CurrentPositionXY)
+        internal void RefreshInfoPaneXY(MouseEventArgs e, PosXY CurrentPositionXY, ref Label lblPosX, ref Label lblPosY)
         {
             var TempPositionXY = new PosXY();
             //to fix at very beginning
@@ -29,9 +29,9 @@ namespace allu2
                 if ((TempPositionXY.PosX != GlobalParameters.OutOfRange) && (TempPositionXY.PosY != GlobalParameters.OutOfRange))
                 {
                     CurrentPositionXY = TempPositionXY;
-                    //board.lblPosX.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosX));
-                    
-                    //labely.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosY));
+                    lblPosX.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosX));
+
+                    lblPosY.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosY));
                 }
 
         }
@@ -49,5 +49,6 @@ namespace allu2
 
             return result;
         }
+
     }
 }
