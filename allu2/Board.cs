@@ -14,9 +14,9 @@ namespace allu2
     {
         public GlobalParameters globalParameters;
         public Graphics graphics;
-
-        private PosXY currentPositionXY;
         public Pane pane;
+
+        public PosXY currentPositionXY = new PosXY();
 
         public Board()
         {
@@ -40,14 +40,12 @@ namespace allu2
             map.Load_Map();
             Draw.drawMapFull(graphics, globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim, map.map);
 
-            //init pane
-            pane = new Pane(globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim);
-            
-            
-
             //populate civilians
             Population pop = new Population(globalParameters.boardDimX, globalParameters.boardDimY);
             pop.Populate(map.map);
+
+            //pane init
+            pane = new Pane(globalParameters.boardDimX, globalParameters.boardDimY, globalParameters.boardBoxDim);
 
             InfantryHeavyArmy a = new InfantryHeavyArmy();
             a.posX = 0;
@@ -67,7 +65,7 @@ namespace allu2
 
         private void Board_MouseMove(object sender, MouseEventArgs e)
         {
-            //pane.RefreshInfoPaneXY(e, globalParameters.CurrentPositionXY, ref lblPosX, ref lblPosY);
+            pane.RefreshInfoPaneXY(e, ref currentPositionXY);
         }
 
     }

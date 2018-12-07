@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace allu2
             this.boardBoxDim = boardBoxDim;
         }
 
-        internal void RefreshInfoPaneXY(MouseEventArgs e, PosXY CurrentPositionXY, ref Label lblPosX, ref Label lblPosY)
+        internal void RefreshInfoPaneXY(MouseEventArgs e, ref PosXY CurrentPositionXY)
         {
             var TempPositionXY = new PosXY();
             //to fix at very beginning
@@ -28,10 +29,7 @@ namespace allu2
             if (CurrentPositionXY != TempPositionXY)
                 if ((TempPositionXY.PosX != GlobalParameters.OutOfRange) && (TempPositionXY.PosY != GlobalParameters.OutOfRange))
                 {
-                    CurrentPositionXY = TempPositionXY;
-                    lblPosX.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosX));
-
-                    lblPosY.Text = Convert.ToString(Convert.ToInt32(CurrentPositionXY.PosY));
+                    CurrentPositionXY = TempPositionXY;                    
                 }
 
         }
